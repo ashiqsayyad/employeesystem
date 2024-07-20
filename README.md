@@ -1,13 +1,13 @@
-# employeesystem
+# Employee Management System
 Application to manage employee data, payroll
 
-#NOTES
+# NOTES
 
 You need to precreate employees database in the postgres DB server  CREATE DATABASE employees;
 
 
 
-#INDEX NOTES STARTING
+# INDEX NOTES STARTING
 
 
 In table employees , we had 801 rows and we ran select query to scan for last row with first_name Ashiq800;
@@ -71,6 +71,7 @@ employees=# EXPLAIN ANALYZE SELECT * FROM employees where first_name='Ashiq800';
  Planning Time: 1.626 ms
  Execution Time: 0.072 ms   **Execution time is reduced in STEP 4 as compared to STEP 1 execution time 0.213 ms**
  
+ **INDEX NOTES ENDING**
 
  
 
