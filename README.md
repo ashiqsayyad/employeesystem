@@ -72,6 +72,15 @@ employees=# EXPLAIN ANALYZE SELECT * FROM employees where first_name='Ashiq800';
  Execution Time: 0.072 ms   **Execution time is reduced in STEP 4 as compared to STEP 1 execution time 0.213 ms**
  
  **INDEX NOTES ENDING**
+ 
+# FOREIGN KEY  NOTES STARTING
+
+A foreign key is a field (or a collection of fields) in one table that uniquely identifies a row of another table. In this case, employee_id in the employee_payroll table is the foreign key that references the primary key empid of the employee table.
+
+
+
+
+
 
  
 
