@@ -22,6 +22,7 @@ In table employees , we had 801 rows and we ran select query to scan for last ro
    Rows Removed by Filter: 800
  Planning Time: 0.140 ms
  Execution Time: 0.213 m
+ 
  As you can see it scanned all the rows which is 801 and discarded 800 rows
 -----------------------------
 
@@ -63,6 +64,7 @@ employees=# Select * from pg_indexes where tablename = 'employees';
 **STEP 4**  ::: Now run the select query with index created on first_name
  
 employees=# EXPLAIN ANALYZE SELECT * FROM employees where first_name='Ashiq800';
+
                                                         QUERY PLAN
 
 ---------------------------------------------------------------------------------------------------------------------------
