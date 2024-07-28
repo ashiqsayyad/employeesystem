@@ -77,6 +77,9 @@ employees=# EXPLAIN ANALYZE SELECT * FROM employees where first_name='Ashiq800';
 
 A foreign key is a field (or a collection of fields) in one table that uniquely identifies a row of another table. In this case, employee_id in the employee_payroll table is the foreign key that references the primary key empid of the employee table.
 
+![image](https://github.com/user-attachments/assets/1501c020-2051-4097-9759-d4aaef36f391)
+
+
 
 
 
