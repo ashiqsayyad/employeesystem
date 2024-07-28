@@ -5,6 +5,8 @@ Application to manage employee data, payroll
 
 You need to precreate employees database in the postgres DB server  CREATE DATABASE employees;
 
+Make sure to create all subpackages inside the package where Springboot Application is created else spring will not be able to scan and configure your classes
+
 
 
 # INDEX NOTES STARTING
