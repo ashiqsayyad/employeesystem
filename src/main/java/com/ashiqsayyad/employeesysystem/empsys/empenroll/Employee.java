@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "employees")
-public class EmployeeBean {
+public class Employee {
 	
 	@Column(name = "first_name")
 	public String firstName;
@@ -77,7 +77,7 @@ public class EmployeeBean {
 	}
 	@Override
 	public String toString() {
-		return "EmployeeBean [firstName=" + firstName + ", lastName=" + lastName + ", empid=" + empid + ", title="
+		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", empid=" + empid + ", title="
 				+ title + ", department=" + department + ", address=" + address + ", mobileNo=" + mobileNo + ", email=\" + email + \"]";
 	}
 

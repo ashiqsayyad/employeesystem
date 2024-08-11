@@ -3,7 +3,7 @@ package com.ashiqsayyad.employeesysystem.empsys.emppayroll;
 import java.math.BigDecimal;
 
 
-import com.ashiqsayyad.employeesysystem.empsys.empenroll.EmployeeBean;
+import com.ashiqsayyad.employeesysystem.empsys.empenroll.Employee;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,13 +33,13 @@ public class EmployeePayroll {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id",referencedColumnName="empid", nullable = false)
-    private EmployeeBean employee;
+    private Employee employee;
 
     // Constructors
     public EmployeePayroll() {
     }
 
-    public EmployeePayroll(BigDecimal salary, String payFrequency, EmployeeBean employee) {
+    public EmployeePayroll(BigDecimal salary, String payFrequency, Employee employee) {
         this.salary = salary;
         this.payFrequency = payFrequency;
         this.employee = employee;
@@ -70,11 +70,11 @@ public class EmployeePayroll {
         this.payFrequency = payFrequency;
     }
 
-    public EmployeeBean getEmployee() {
+    public Employee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(EmployeeBean employee) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 }

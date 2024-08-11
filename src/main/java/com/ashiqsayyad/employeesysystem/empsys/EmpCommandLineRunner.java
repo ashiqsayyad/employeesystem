@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.ashiqsayyad.employeesysystem.empsys.empenroll.EmployeeBean;
+import com.ashiqsayyad.employeesysystem.empsys.empenroll.Employee;
 import com.ashiqsayyad.employeesysystem.empsys.empenroll.EmployeeRepository;
 import com.ashiqsayyad.employeesysystem.empsys.emppayroll.EmployeePayroll;
 import com.ashiqsayyad.employeesysystem.empsys.emppayroll.EmployeePayrollRepository;
@@ -31,7 +31,7 @@ public class EmpCommandLineRunner implements CommandLineRunner {
 		
 		/*
 		// Creating an employee
-		EmployeeBean emp = new EmployeeBean();
+		Employee emp = new Employee();
 		emp.setFirstName("Ashiqtemp1"); emp.setLastName("SayyadTemp");
 		emp.setDepartment("CTStemp1"); emp.setMobileNo("901026001234");
 		emp.setTitle("Cloud Architecttemp1"); emp.setAddress("lanco hils temp");
@@ -46,7 +46,7 @@ public class EmpCommandLineRunner implements CommandLineRunner {
 		//EmployeePayroll payroll = new EmployeePayroll(new BigDecimal("500000"),"MONTHLY", emp);
 		//empPayrollRepo.save(payroll);
 		/*
-		 * EmployeeBean emp; for (int i =201;i <=800;i++) { emp = new EmployeeBean();
+		 * Employee emp; for (int i =201;i <=800;i++) { emp = new Employee();
 		 * emp.setFirstName("Ashiq"+i); emp.setLastName("Sayyad"+i);
 		 * emp.setDepartment("CTS"+i); emp.setMobileNo("9010260000"+i);
 		 * emp.setTitle("Cloud Architect"+i); emp.setAddress("lanco hils"+i);
@@ -56,13 +56,13 @@ public class EmpCommandLineRunner implements CommandLineRunner {
 		 * }
 		 */
 		/*
-		 * emp = new EmployeeBean(); emp.setFirstName("Ashiq");
+		 * emp = new Employee(); emp.setFirstName("Ashiq");
 		 * emp.setLastName("Sayyad"); emp.setDepartment("CTS");
 		 * emp.setMobileNo("8790878144"); emp.setTitle("Cloud Architect");
 		 * emp.setAddress("lanco hils"); emp.setEmail("ashk@gmail.com");
 		 * log.info("New Emp is created 2 : " + emp); empRepository.save(emp);
 		 * 
-		 * emp = new EmployeeBean(); emp.setFirstName("Ashiq");
+		 * emp = new Employee(); emp.setFirstName("Ashiq");
 		 * emp.setLastName("Sayyad"); emp.setDepartment("CTS");
 		 * emp.setMobileNo("8790878144"); emp.setTitle("Cloud Architect");
 		 * emp.setAddress("lanco hils"); emp.setEmail("ashk@gmail.com");
