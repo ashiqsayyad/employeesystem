@@ -1,19 +1,13 @@
 package com.ashiqsayyad.employeesysystem.empsys;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.ashiqsayyad.employeesysystem.empsys.empenroll.Employee;
 import com.ashiqsayyad.employeesysystem.empsys.empenroll.EmployeeRepository;
-import com.ashiqsayyad.employeesysystem.empsys.emppayroll.EmployeePayroll;
 import com.ashiqsayyad.employeesysystem.empsys.emppayroll.EmployeePayrollRepository;
-import com.ashiqsayyad.employeesysystem.empsys.emppayroll.EmployeePayroll.PAY_FREQ;
-
-import java.math.BigDecimal;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Component
 public class EmpCommandLineRunner implements CommandLineRunner {

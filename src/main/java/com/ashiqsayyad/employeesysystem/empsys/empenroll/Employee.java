@@ -1,11 +1,18 @@
 package com.ashiqsayyad.employeesysystem.empsys.empenroll;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import com.ashiqsayyad.employeesysystem.empsys.emppayroll.EmployeePayroll;
 
 @Entity
 @Table(name = "employees")
@@ -26,6 +33,9 @@ public class Employee {
 	public String mobileNo;
 	 @Column(nullable = false, unique = true)
 	public String email;
+	 
+	 @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+	 private Set<EmployeePayroll> payrolls = new HashSet<>();
 	
 	public String getFirstName() {
 		return firstName;
@@ -75,6 +85,25 @@ public class Employee {
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
+	
+	public Set<EmployeePayroll> getPayrolls() {
+        return payrolls;
+    }
+
+    public void setPayrolls(Set<EmployeePayroll> payrolls) {
+        this.payrolls = payrolls;
+    }
+
+    public void addPayroll(EmployeePayroll payroll) {
+        payrolls.add(payroll);
+        payroll.setEmployee(this);
+    }
+
+    public void removePayroll(EmployeePayroll payroll) {
+        payrolls.remove(payroll);
+        payroll.setEmployee(null);
+    }
+    
 	@Override
 	public String toString() {
 		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", empid=" + empid + ", title="
