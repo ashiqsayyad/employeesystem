@@ -13,6 +13,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.ashiqsayyad.employeesysystem.empsys.emppayroll.EmployeePayroll;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "employees")
@@ -35,6 +37,7 @@ public class Employee {
 	public String email;
 	 
 	 @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+	 @JsonManagedReference
 	 private Set<EmployeePayroll> payrolls = new HashSet<>();
 	
 	public String getFirstName() {

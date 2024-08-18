@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 
 import com.ashiqsayyad.employeesysystem.empsys.empenroll.Employee;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,6 +34,7 @@ public class EmployeePayroll {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id",referencedColumnName="empid", nullable = false)
+    @JsonBackReference
     private Employee employee;
 
     // Constructors
